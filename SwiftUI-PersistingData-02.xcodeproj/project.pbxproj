@@ -18,8 +18,8 @@
 		E4648E6B2640D80500DD8399 /* DataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4648E6A2640D80500DD8399 /* DataRepository.swift */; };
 		E4648E6E2640D88600DD8399 /* AddDog.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4648E6D2640D88600DD8399 /* AddDog.swift */; };
 		E4648E702640E40F00DD8399 /* TODO.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E4648E6F2640E40F00DD8399 /* TODO.rtf */; };
-		E4648E732640E86000DD8399 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4648E722640E86000DD8399 /* Main.swift */; };
 		E4648E752640E98B00DD8399 /* ListAllDogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4648E742640E98B00DD8399 /* ListAllDogs.swift */; };
+		E4648E772641066B00DD8399 /* ListDogsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4648E762641066B00DD8399 /* ListDogsRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +34,8 @@
 		E4648E6A2640D80500DD8399 /* DataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRepository.swift; sourceTree = "<group>"; };
 		E4648E6D2640D88600DD8399 /* AddDog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDog.swift; sourceTree = "<group>"; };
 		E4648E6F2640E40F00DD8399 /* TODO.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = TODO.rtf; sourceTree = "<group>"; };
-		E4648E722640E86000DD8399 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		E4648E742640E98B00DD8399 /* ListAllDogs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListAllDogs.swift; sourceTree = "<group>"; };
+		E4648E762641066B00DD8399 /* ListDogsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDogsRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +73,6 @@
 				E4648E6C2640D86700DD8399 /* Views */,
 				E4648E602640D70C00DD8399 /* Models */,
 				E4648E512640D6FA00DD8399 /* SwiftUI_PersistingData_02App.swift */,
-				E4648E532640D6FA00DD8399 /* ContentView.swift */,
 				E4648E552640D6FD00DD8399 /* Assets.xcassets */,
 				E4648E5A2640D6FD00DD8399 /* Info.plist */,
 				E4648E572640D6FD00DD8399 /* Preview Content */,
@@ -103,9 +102,10 @@
 		E4648E6C2640D86700DD8399 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E4648E722640E86000DD8399 /* Main.swift */,
+				E4648E532640D6FA00DD8399 /* ContentView.swift */,
 				E4648E6D2640D88600DD8399 /* AddDog.swift */,
 				E4648E742640E98B00DD8399 /* ListAllDogs.swift */,
+				E4648E762641066B00DD8399 /* ListDogsRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -192,7 +192,7 @@
 				E4648E6E2640D88600DD8399 /* AddDog.swift in Sources */,
 				E4648E6B2640D80500DD8399 /* DataRepository.swift in Sources */,
 				E4648E692640D7C600DD8399 /* Person.swift in Sources */,
-				E4648E732640E86000DD8399 /* Main.swift in Sources */,
+				E4648E772641066B00DD8399 /* ListDogsRow.swift in Sources */,
 				E4648E752640E98B00DD8399 /* ListAllDogs.swift in Sources */,
 				E4648E622640D71E00DD8399 /* Dog.swift in Sources */,
 			);

@@ -17,7 +17,7 @@ struct ListAllDogs: View {
         Text("Dog Info:")
         
         ForEach(self.theDataRepo.loadDogs().map(Dog.init), id: \.self) { aDog in
-            Text(aDog.name)
+            ListDogsRow(theDog: aDog)
         }
     }
 }

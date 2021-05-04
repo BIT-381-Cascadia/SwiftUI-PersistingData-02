@@ -11,7 +11,9 @@ import RealmSwift
 class DataRepository: ObservableObject {
     
     init(realm: Realm) {
-        
+        // We're not actually doing anything with this
+        // but it does show how to initialize a more
+        // complicated object
     }
     
     func saveDog(theDog: Dog) {

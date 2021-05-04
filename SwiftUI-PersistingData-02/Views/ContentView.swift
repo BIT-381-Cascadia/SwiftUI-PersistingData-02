@@ -1,13 +1,26 @@
 //
-//  Main.swift
+//  ContentView.swift
 //  SwiftUI-PersistingData-02
 //
 //  Created by Mike Panitz on 5/3/21.
 //
 
 import SwiftUI
+import RealmSwift
 
-struct Main: View {
+struct ContentView: View {
+    
+    let realmObj: Realm
+    
+    init() {
+        do {
+          realmObj = try Realm()
+        } catch let error {
+          // Handle error
+          fatalError("Failed to open Realm. Error: \(error.localizedDescription)")
+        }
+    }
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -22,11 +35,13 @@ struct Main: View {
                     .padding()
             }
         }
+            .padding()
+            .environmentObject(DataRepository(realm: realmObj))
     }
 }
 
-struct Main_Previews: PreviewProvider {
+struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        Main()
+        ContentView()
     }
 }

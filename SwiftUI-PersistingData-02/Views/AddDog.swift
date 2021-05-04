@@ -21,6 +21,9 @@ struct AddDog: View {
         print("age: \(age)")
     }
     
+    // To dismiss the screen:
+    // https://stackoverflow.com/a/57279591/250610
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     func saveDogToDB() {
         guard Int(self.age) != nil else {
@@ -32,6 +35,9 @@ struct AddDog: View {
         
         let newDog = Dog(name: self.name, age: Int(self.age)! )
         theDataRepo.saveDog(theDog: newDog)
+        
+        // return to previous screen:
+        self.presentationMode.wrappedValue.dismiss()
     }
     
     var body: some View {
@@ -43,7 +49,7 @@ struct AddDog: View {
                 }
                 Button(action: saveDogToDB)
                 {
-                    Text("Save21")
+                    Text("Save")
                 }
             }
             .navigationBarTitle("Add New Dog")
