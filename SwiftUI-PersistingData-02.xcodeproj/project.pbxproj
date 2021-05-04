@@ -20,7 +20,6 @@
 		E4648E702640E40F00DD8399 /* TODO.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E4648E6F2640E40F00DD8399 /* TODO.rtf */; };
 		E4648E752640E98B00DD8399 /* ListAllDogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4648E742640E98B00DD8399 /* ListAllDogs.swift */; };
 		E4648E772641066B00DD8399 /* ListDogsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4648E762641066B00DD8399 /* ListDogsRow.swift */; };
-		E4648E7926410C0600DD8399 /* .gitignore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4648E7826410C0600DD8399 /* .gitignore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +36,6 @@
 		E4648E6F2640E40F00DD8399 /* TODO.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = TODO.rtf; sourceTree = "<group>"; };
 		E4648E742640E98B00DD8399 /* ListAllDogs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListAllDogs.swift; sourceTree = "<group>"; };
 		E4648E762641066B00DD8399 /* ListDogsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDogsRow.swift; sourceTree = "<group>"; };
-		E4648E7826410C0600DD8399 /* .gitignore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = .gitignore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +54,6 @@
 		E4648E452640D6FA00DD8399 = {
 			isa = PBXGroup;
 			children = (
-				E4648E7826410C0600DD8399 /* .gitignore.swift */,
 				E4648E502640D6FA00DD8399 /* SwiftUI-PersistingData-02 */,
 				E4648E4F2640D6FA00DD8399 /* Products */,
 			);
@@ -193,7 +190,6 @@
 				E4648E542640D6FA00DD8399 /* ContentView.swift in Sources */,
 				E4648E522640D6FA00DD8399 /* SwiftUI_PersistingData_02App.swift in Sources */,
 				E4648E6E2640D88600DD8399 /* AddDog.swift in Sources */,
-				E4648E7926410C0600DD8399 /* .gitignore.swift in Sources */,
 				E4648E6B2640D80500DD8399 /* DataRepository.swift in Sources */,
 				E4648E692640D7C600DD8399 /* Person.swift in Sources */,
 				E4648E772641066B00DD8399 /* ListDogsRow.swift in Sources */,
