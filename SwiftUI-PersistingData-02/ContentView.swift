@@ -6,11 +6,25 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct ContentView: View {
+    
+    let realm: Realm
+    
+    init() {
+        do {
+          realm = try Realm()
+        } catch let error {
+          // Handle error
+          fatalError("Failed to open Realm. Error: \(error.localizedDescription)")
+        }
+    }
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+            Main()
+                .padding()
+                .environmentObject(DataRepository(realm: realm))
     }
 }
 

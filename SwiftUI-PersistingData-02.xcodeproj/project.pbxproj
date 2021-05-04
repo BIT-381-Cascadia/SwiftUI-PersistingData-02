@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,15 @@
 		E4648E542640D6FA00DD8399 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4648E532640D6FA00DD8399 /* ContentView.swift */; };
 		E4648E562640D6FD00DD8399 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4648E552640D6FD00DD8399 /* Assets.xcassets */; };
 		E4648E592640D6FD00DD8399 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4648E582640D6FD00DD8399 /* Preview Assets.xcassets */; };
+		E4648E622640D71E00DD8399 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4648E612640D71E00DD8399 /* Dog.swift */; };
+		E4648E652640D7AB00DD8399 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = E4648E642640D7AB00DD8399 /* Realm */; };
+		E4648E672640D7AB00DD8399 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E4648E662640D7AB00DD8399 /* RealmSwift */; };
+		E4648E692640D7C600DD8399 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4648E682640D7C600DD8399 /* Person.swift */; };
+		E4648E6B2640D80500DD8399 /* DataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4648E6A2640D80500DD8399 /* DataRepository.swift */; };
+		E4648E6E2640D88600DD8399 /* AddDog.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4648E6D2640D88600DD8399 /* AddDog.swift */; };
+		E4648E702640E40F00DD8399 /* TODO.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E4648E6F2640E40F00DD8399 /* TODO.rtf */; };
+		E4648E732640E86000DD8399 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4648E722640E86000DD8399 /* Main.swift */; };
+		E4648E752640E98B00DD8399 /* ListAllDogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4648E742640E98B00DD8399 /* ListAllDogs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +29,13 @@
 		E4648E552640D6FD00DD8399 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4648E582640D6FD00DD8399 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E4648E5A2640D6FD00DD8399 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4648E612640D71E00DD8399 /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
+		E4648E682640D7C600DD8399 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		E4648E6A2640D80500DD8399 /* DataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRepository.swift; sourceTree = "<group>"; };
+		E4648E6D2640D88600DD8399 /* AddDog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDog.swift; sourceTree = "<group>"; };
+		E4648E6F2640E40F00DD8399 /* TODO.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = TODO.rtf; sourceTree = "<group>"; };
+		E4648E722640E86000DD8399 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		E4648E742640E98B00DD8399 /* ListAllDogs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListAllDogs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +43,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4648E672640D7AB00DD8399 /* RealmSwift in Frameworks */,
+				E4648E652640D7AB00DD8399 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,11 +70,14 @@
 		E4648E502640D6FA00DD8399 /* SwiftUI-PersistingData-02 */ = {
 			isa = PBXGroup;
 			children = (
+				E4648E6C2640D86700DD8399 /* Views */,
+				E4648E602640D70C00DD8399 /* Models */,
 				E4648E512640D6FA00DD8399 /* SwiftUI_PersistingData_02App.swift */,
 				E4648E532640D6FA00DD8399 /* ContentView.swift */,
 				E4648E552640D6FD00DD8399 /* Assets.xcassets */,
 				E4648E5A2640D6FD00DD8399 /* Info.plist */,
 				E4648E572640D6FD00DD8399 /* Preview Content */,
+				E4648E6F2640E40F00DD8399 /* TODO.rtf */,
 			);
 			path = "SwiftUI-PersistingData-02";
 			sourceTree = "<group>";
@@ -67,6 +88,26 @@
 				E4648E582640D6FD00DD8399 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E4648E602640D70C00DD8399 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E4648E612640D71E00DD8399 /* Dog.swift */,
+				E4648E682640D7C600DD8399 /* Person.swift */,
+				E4648E6A2640D80500DD8399 /* DataRepository.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E4648E6C2640D86700DD8399 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E4648E722640E86000DD8399 /* Main.swift */,
+				E4648E6D2640D88600DD8399 /* AddDog.swift */,
+				E4648E742640E98B00DD8399 /* ListAllDogs.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +126,10 @@
 			dependencies = (
 			);
 			name = "SwiftUI-PersistingData-02";
+			packageProductDependencies = (
+				E4648E642640D7AB00DD8399 /* Realm */,
+				E4648E662640D7AB00DD8399 /* RealmSwift */,
+			);
 			productName = "SwiftUI-PersistingData-02";
 			productReference = E4648E4E2640D6FA00DD8399 /* SwiftUI-PersistingData-02.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +157,9 @@
 				Base,
 			);
 			mainGroup = E4648E452640D6FA00DD8399;
+			packageReferences = (
+				E4648E632640D7AB00DD8399 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+			);
 			productRefGroup = E4648E4F2640D6FA00DD8399 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -128,6 +176,7 @@
 			files = (
 				E4648E592640D6FD00DD8399 /* Preview Assets.xcassets in Resources */,
 				E4648E562640D6FD00DD8399 /* Assets.xcassets in Resources */,
+				E4648E702640E40F00DD8399 /* TODO.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +189,12 @@
 			files = (
 				E4648E542640D6FA00DD8399 /* ContentView.swift in Sources */,
 				E4648E522640D6FA00DD8399 /* SwiftUI_PersistingData_02App.swift in Sources */,
+				E4648E6E2640D88600DD8399 /* AddDog.swift in Sources */,
+				E4648E6B2640D80500DD8399 /* DataRepository.swift in Sources */,
+				E4648E692640D7C600DD8399 /* Person.swift in Sources */,
+				E4648E732640E86000DD8399 /* Main.swift in Sources */,
+				E4648E752640E98B00DD8399 /* ListAllDogs.swift in Sources */,
+				E4648E622640D71E00DD8399 /* Dog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +381,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E4648E632640D7AB00DD8399 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.7.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E4648E642640D7AB00DD8399 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E4648E632640D7AB00DD8399 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		E4648E662640D7AB00DD8399 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E4648E632640D7AB00DD8399 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E4648E462640D6FA00DD8399 /* Project object */;
 }
