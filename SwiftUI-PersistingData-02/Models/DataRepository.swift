@@ -26,9 +26,24 @@ class DataRepository: ObservableObject {
         }
     }
     
+    func saveCat(newName: String, newAge: Int) {
+        objectWillChange.send()
+        let realm = try! Realm()
+
+        try! realm.write {
+            let theCat = Cat(id: UUID().hashValue, name: newName, age: newAge)
+            realm.add(theCat)
+        }
+    }
+    
     func loadDogs() -> Results<Dog> {
         let realm = try! Realm()
         return realm.objects(Dog.self)
+    }
+    
+    func loadCats() -> Results<Cat> {
+        let realm = try! Realm()
+        return realm.objects(Cat.self)
     }
     
     func findADog(name: String) -> Dog? {
@@ -68,6 +83,28 @@ class DataRepository: ObservableObject {
         }
     }
     
+    func deleteCat(theCat: Cat) {
+        objectWillChange.send()
+
+        do {
+            // 3
+            let realm = try Realm()
+            let results = realm.objects(Cat.self).filter( "id = " + String(theCat.id) + "  ")
+            
+            if results.count != 1 {
+                return
+            }
+
+            try realm.write {
+                // 4
+                realm.delete(results[0])
+            }
+        } catch let error {
+          // Handle error
+          print(error.localizedDescription)
+        }
+    }
+    
     func deleteAllDogs() {
         objectWillChange.send()
 
@@ -92,6 +129,24 @@ class DataRepository: ObservableObject {
             // 3
             realm.create(
               Dog.self,
+                value: ["id": id, "name": newName, "age": newAge],
+              update: .modified)
+          }
+        } catch let error {
+          // Handle error
+          print(error.localizedDescription)
+        }
+    }
+    func UpdateCat( id: Int, newName:String, newAge:Int) {
+        // 1
+        objectWillChange.send()
+        do {
+          // 2
+          let realm = try Realm()
+          try realm.write {
+            // 3
+            realm.create(
+              Cat.self,
                 value: ["id": id, "name": newName, "age": newAge],
               update: .modified)
           }

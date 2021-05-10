@@ -32,7 +32,7 @@ struct ClearDB: View {
     
     var body: some View {
         VStack {
-            Text("Are you sure you want to delete all the adorable dogs?")
+            Text("Are you sure you want to delete all the adorable dogs and cats?")
             HStack {
                 Button(action: clearDB)
                 {
