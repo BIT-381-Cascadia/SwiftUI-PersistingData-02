@@ -14,7 +14,6 @@
 		E4648E622640D71E00DD8399 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4648E612640D71E00DD8399 /* Dog.swift */; };
 		E4648E652640D7AB00DD8399 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = E4648E642640D7AB00DD8399 /* Realm */; };
 		E4648E672640D7AB00DD8399 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E4648E662640D7AB00DD8399 /* RealmSwift */; };
-		E4648E692640D7C600DD8399 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4648E682640D7C600DD8399 /* Person.swift */; };
 		E4648E6B2640D80500DD8399 /* DataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4648E6A2640D80500DD8399 /* DataRepository.swift */; };
 		E4648E6E2640D88600DD8399 /* AddDog.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4648E6D2640D88600DD8399 /* AddDog.swift */; };
 		E4648E702640E40F00DD8399 /* TODO.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E4648E6F2640E40F00DD8399 /* TODO.rtf */; };
@@ -33,7 +32,6 @@
 		E4648E582640D6FD00DD8399 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E4648E5A2640D6FD00DD8399 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4648E612640D71E00DD8399 /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
-		E4648E682640D7C600DD8399 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		E4648E6A2640D80500DD8399 /* DataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRepository.swift; sourceTree = "<group>"; };
 		E4648E6D2640D88600DD8399 /* AddDog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDog.swift; sourceTree = "<group>"; };
 		E4648E6F2640E40F00DD8399 /* TODO.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = TODO.rtf; sourceTree = "<group>"; };
@@ -99,7 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				E4648E612640D71E00DD8399 /* Dog.swift */,
-				E4648E682640D7C600DD8399 /* Person.swift */,
 				E4648E6A2640D80500DD8399 /* DataRepository.swift */,
 			);
 			path = Models;
@@ -200,7 +197,6 @@
 				E4648E522640D6FA00DD8399 /* SwiftUI_PersistingData_02App.swift in Sources */,
 				E4648E6E2640D88600DD8399 /* AddDog.swift in Sources */,
 				E4648E6B2640D80500DD8399 /* DataRepository.swift in Sources */,
-				E4648E692640D7C600DD8399 /* Person.swift in Sources */,
 				E47DA81326499CAF00F64DE2 /* UpdateDog.swift in Sources */,
 				E47DA8152649AD4200F64DE2 /* ClearDB.swift in Sources */,
 				E4648E772641066B00DD8399 /* ListDogsRow.swift in Sources */,
