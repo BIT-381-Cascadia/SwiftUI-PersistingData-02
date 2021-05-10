@@ -24,23 +24,38 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
-                NavigationLink(destination: AddDog()) {
-                    Text("Add a Dog")
+               // NavigationLink(destination: AddDog()) {
+                   // Text("Add a Dog")
+               // }
+                   // .padding()
+                
+                NavigationLink(destination: AddCat()) {
+                    Text("Add a Cat")
                 }
                     .padding()
                 
-                NavigationLink(destination: ListAllDogs(whichMode:.List)) {
-                    Text("List All Dogs")
+                //NavigationLink(destination: ListAllDogs(whichMode:.List)) {
+                  //  Text("List All Dogs")
+                //}
+                   // .padding()
+                
+                NavigationLink(destination: ListAllCats(whichMode:.List)) {
+                    Text("List All Cats")
                 }
                     .padding()
 
-                NavigationLink(destination: ListAllDogs(whichMode: .Update)) {
-                    Text("Update A Dog")
-                }
-                    .padding()
+                //NavigationLink(destination: ListAllDogs(whichMode: .Update)) {
+                   // Text("Update A Dog")
+               // }
+                    //.padding()
                 
-                NavigationLink(destination: ListAllDogs(whichMode: .Delete)) {
-                    Text("Delete A Dog")
+                //NavigationLink(destination: ListAllDogs(whichMode: .Delete)) {
+                  //  Text("Delete A Dog")
+               // }
+                    //.padding()
+                
+                NavigationLink(destination: ListAllCats(whichMode: .Delete)) {
+                    Text("Delete A Cat")
                 }
                     .padding()
                 

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F9389D22649DAE5005F646F /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9389D12649DAE5005F646F /* Cat.swift */; };
+		3F9389D42649DB73005F646F /* AddCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9389D32649DB73005F646F /* AddCat.swift */; };
+		3F9389D62649DDFF005F646F /* ListAllCats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9389D52649DDFF005F646F /* ListAllCats.swift */; };
+		3F9389D82649DE59005F646F /* CatListMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9389D72649DE59005F646F /* CatListMode.swift */; };
+		3F9389DA2649DECD005F646F /* ListCatRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9389D92649DECD005F646F /* ListCatRow.swift */; };
+		3F9389DC2649E1D2005F646F /* UpdateCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9389DB2649E1D2005F646F /* UpdateCat.swift */; };
 		E4648E522640D6FA00DD8399 /* SwiftUI_PersistingData_02App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4648E512640D6FA00DD8399 /* SwiftUI_PersistingData_02App.swift */; };
 		E4648E542640D6FA00DD8399 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4648E532640D6FA00DD8399 /* ContentView.swift */; };
 		E4648E562640D6FD00DD8399 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4648E552640D6FD00DD8399 /* Assets.xcassets */; };
@@ -25,6 +31,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F9389D12649DAE5005F646F /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
+		3F9389D32649DB73005F646F /* AddCat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCat.swift; sourceTree = "<group>"; };
+		3F9389D52649DDFF005F646F /* ListAllCats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAllCats.swift; sourceTree = "<group>"; };
+		3F9389D72649DE59005F646F /* CatListMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListMode.swift; sourceTree = "<group>"; };
+		3F9389D92649DECD005F646F /* ListCatRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCatRow.swift; sourceTree = "<group>"; };
+		3F9389DB2649E1D2005F646F /* UpdateCat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCat.swift; sourceTree = "<group>"; };
 		E4648E4E2640D6FA00DD8399 /* SwiftUI-PersistingData-02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-PersistingData-02.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4648E512640D6FA00DD8399 /* SwiftUI_PersistingData_02App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_PersistingData_02App.swift; sourceTree = "<group>"; };
 		E4648E532640D6FA00DD8399 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -98,6 +110,7 @@
 			children = (
 				E4648E612640D71E00DD8399 /* Dog.swift */,
 				E4648E6A2640D80500DD8399 /* DataRepository.swift */,
+				3F9389D12649DAE5005F646F /* Cat.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -112,6 +125,11 @@
 				E4648E742640E98B00DD8399 /* ListAllDogs.swift */,
 				E4648E762641066B00DD8399 /* ListDogsRow.swift */,
 				E47DA81026499A5200F64DE2 /* DogListMode.swift */,
+				3F9389D32649DB73005F646F /* AddCat.swift */,
+				3F9389D52649DDFF005F646F /* ListAllCats.swift */,
+				3F9389D72649DE59005F646F /* CatListMode.swift */,
+				3F9389D92649DECD005F646F /* ListCatRow.swift */,
+				3F9389DB2649E1D2005F646F /* UpdateCat.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -194,9 +212,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4648E542640D6FA00DD8399 /* ContentView.swift in Sources */,
+				3F9389DA2649DECD005F646F /* ListCatRow.swift in Sources */,
 				E4648E522640D6FA00DD8399 /* SwiftUI_PersistingData_02App.swift in Sources */,
+				3F9389D62649DDFF005F646F /* ListAllCats.swift in Sources */,
 				E4648E6E2640D88600DD8399 /* AddDog.swift in Sources */,
+				3F9389DC2649E1D2005F646F /* UpdateCat.swift in Sources */,
+				3F9389D22649DAE5005F646F /* Cat.swift in Sources */,
+				3F9389D42649DB73005F646F /* AddCat.swift in Sources */,
 				E4648E6B2640D80500DD8399 /* DataRepository.swift in Sources */,
+				3F9389D82649DE59005F646F /* CatListMode.swift in Sources */,
 				E47DA81326499CAF00F64DE2 /* UpdateDog.swift in Sources */,
 				E47DA8152649AD4200F64DE2 /* ClearDB.swift in Sources */,
 				E4648E772641066B00DD8399 /* ListDogsRow.swift in Sources */,
