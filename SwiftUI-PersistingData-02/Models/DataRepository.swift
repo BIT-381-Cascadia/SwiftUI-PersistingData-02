@@ -26,9 +26,30 @@ class DataRepository: ObservableObject {
         }
     }
     
+    /*
+     Method to add a cat to the database
+     */
+    func saveCat(catName: String, catAge: Int, catSex: String){
+        objectWillChange.send()
+        let realm = try! Realm()
+        
+        try! realm.write{
+            let newCat = Cat(id: UUID().hashValue, name: catName, age: catAge, sex: catSex )
+            realm.add(newCat)
+        }
+    }
+    
     func loadDogs() -> Results<Dog> {
         let realm = try! Realm()
         return realm.objects(Dog.self)
+    }
+    
+    /*
+     Method to get all cats stored in the database
+     */
+    func loadCats() -> Results<Cat> {
+        let realm = try! Realm()
+        return realm.objects(Cat.self)
     }
     
     func findADog(name: String) -> Dog? {
@@ -65,6 +86,29 @@ class DataRepository: ObservableObject {
         } catch let error {
           // Handle error
           print(error.localizedDescription)
+        }
+    }
+    
+    /**
+     Delete a cat from the database
+     */
+    func deleteCat(cat: Cat){
+        objectWillChange.send()
+        
+        do {
+            
+            let realm = try Realm()
+            let results = realm.objects(Cat.self).filter("id = " + String(cat.id) + " ")
+            
+            if results.count != 1 {
+                return
+            }
+            
+            try realm.write{
+                realm.delete(results[0])
+            }
+        } catch let error {
+            print(error.localizedDescription)
         }
     }
     
