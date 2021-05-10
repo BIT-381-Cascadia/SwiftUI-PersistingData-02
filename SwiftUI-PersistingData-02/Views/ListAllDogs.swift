@@ -12,6 +12,7 @@ import RealmSwift
 
 struct ListAllDogs: View {
     @EnvironmentObject var theDataRepo: DataRepository
+    var whichMode: DogListMode
     
     var body: some View {
         VStack {
@@ -21,7 +22,7 @@ struct ListAllDogs: View {
             // https://www.hackingwithswift.com/books/ios-swiftui/how-scrollview-lets-us-work-with-scrolling-data
             ScrollView(.vertical) {
                 ForEach(self.theDataRepo.loadDogs().map(Dog.init), id: \.self) { aDog in
-                    ListDogsRow(theDog: aDog)
+                    ListDogsRow(theDog: aDog, mode:whichMode)
                 }
             }
         }
@@ -30,7 +31,7 @@ struct ListAllDogs: View {
 
 struct ListAllDogs_Previews: PreviewProvider {
     static var previews: some View {
-        ListAllDogs()
+        ListAllDogs(whichMode: .List)
             .environmentObject(DataRepository(realm: try! Realm()))
     }
 }

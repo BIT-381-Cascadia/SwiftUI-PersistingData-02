@@ -16,4 +16,8 @@ class Dog: Object {
         self.name = name
         self.age = age
     }
+    
+//    override class func primaryKey() -> String? {
+//        return "name"
+//    }
 }

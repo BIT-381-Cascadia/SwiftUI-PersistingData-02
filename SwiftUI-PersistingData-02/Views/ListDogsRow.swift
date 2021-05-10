@@ -9,14 +9,29 @@ import SwiftUI
 
 struct ListDogsRow: View {
     
+    var mode: DogListMode
+    
+    
     private let thisDog:Dog
     
-    init(theDog:Dog) {
+    init(theDog:Dog, mode:DogListMode) {
         thisDog = theDog
+        self.mode = mode
     }
     
+    // A "no-op" is an operation that doesn't do anything
     func noop() {
         
+    }
+    
+    
+    @EnvironmentObject var theDataRepo: DataRepository
+    
+    func deleteDogFromDB() {
+        theDataRepo.deleteDog(theDog: thisDog)
+        
+        // return to previous screen:
+        // self.presentationMode.wrappedValue.dismiss()
     }
     
     var body: some View {
@@ -26,12 +41,20 @@ struct ListDogsRow: View {
                 Text("Age: \(String(thisDog.age))")
             }
             Spacer()
-            Button(action:noop) {
-                Text("Edit")
+            if mode == .Update {
+                Button(action:noop) {
+                    Text("Edit")
+                }
             }
-            Spacer()
-            Button(action:noop) {
-                Text("Delete")
+            else if mode == .Update {
+                Button(action:noop) {
+                    Text("Update")
+                }
+            }
+            else if mode == .Delete {
+                Button(action:deleteDogFromDB) {
+                    Text("Delete")
+                }
             }
         }
         .padding()
@@ -45,6 +68,6 @@ struct ListDogsRow_Previews: PreviewProvider {
     static var previews: some View {
         let demoDog = Dog(name: "Fido", age: 3)
         
-        ListDogsRow(theDog: demoDog)
+        ListDogsRow(theDog: demoDog, mode: .Update)
     }
 }

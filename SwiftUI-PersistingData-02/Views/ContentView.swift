@@ -29,10 +29,21 @@ struct ContentView: View {
                 }
                     .padding()
                 
-                NavigationLink(destination: ListAllDogs()) {
+                NavigationLink(destination: ListAllDogs(whichMode:.List)) {
                     Text("List All Dogs")
                 }
                     .padding()
+
+                NavigationLink(destination: ListAllDogs(whichMode: .Update)) {
+                    Text("Update A Dog")
+                }
+                    .padding()
+                
+                NavigationLink(destination: ListAllDogs(whichMode: .Delete)) {
+                    Text("Delete A Dog")
+                }
+                    .padding()
+
             }
         }
             .padding()

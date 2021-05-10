@@ -20,6 +20,8 @@
 		E4648E702640E40F00DD8399 /* TODO.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E4648E6F2640E40F00DD8399 /* TODO.rtf */; };
 		E4648E752640E98B00DD8399 /* ListAllDogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4648E742640E98B00DD8399 /* ListAllDogs.swift */; };
 		E4648E772641066B00DD8399 /* ListDogsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4648E762641066B00DD8399 /* ListDogsRow.swift */; };
+		E47DA81126499A5200F64DE2 /* DogListMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47DA81026499A5200F64DE2 /* DogListMode.swift */; };
+		E47DA81326499CAF00F64DE2 /* UpdateDog.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47DA81226499CAF00F64DE2 /* UpdateDog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		E4648E6F2640E40F00DD8399 /* TODO.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = TODO.rtf; sourceTree = "<group>"; };
 		E4648E742640E98B00DD8399 /* ListAllDogs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListAllDogs.swift; sourceTree = "<group>"; };
 		E4648E762641066B00DD8399 /* ListDogsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDogsRow.swift; sourceTree = "<group>"; };
+		E47DA81026499A5200F64DE2 /* DogListMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogListMode.swift; sourceTree = "<group>"; };
+		E47DA81226499CAF00F64DE2 /* UpdateDog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateDog.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,8 +108,10 @@
 			children = (
 				E4648E532640D6FA00DD8399 /* ContentView.swift */,
 				E4648E6D2640D88600DD8399 /* AddDog.swift */,
+				E47DA81226499CAF00F64DE2 /* UpdateDog.swift */,
 				E4648E742640E98B00DD8399 /* ListAllDogs.swift */,
 				E4648E762641066B00DD8399 /* ListDogsRow.swift */,
+				E47DA81026499A5200F64DE2 /* DogListMode.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -192,7 +198,9 @@
 				E4648E6E2640D88600DD8399 /* AddDog.swift in Sources */,
 				E4648E6B2640D80500DD8399 /* DataRepository.swift in Sources */,
 				E4648E692640D7C600DD8399 /* Person.swift in Sources */,
+				E47DA81326499CAF00F64DE2 /* UpdateDog.swift in Sources */,
 				E4648E772641066B00DD8399 /* ListDogsRow.swift in Sources */,
+				E47DA81126499A5200F64DE2 /* DogListMode.swift in Sources */,
 				E4648E752640E98B00DD8399 /* ListAllDogs.swift in Sources */,
 				E4648E622640D71E00DD8399 /* Dog.swift in Sources */,
 			);
