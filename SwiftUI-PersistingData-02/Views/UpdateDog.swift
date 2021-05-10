@@ -14,8 +14,12 @@ struct UpdateDog: View {
     @State var name: String = ""
     @State var age: String = ""
     
-    private let original: Dog
+    private var original: Dog = Dog()
+    
+    init() { }
+    
     init(originalDog OD: Dog) {
+        self.init()
         original = OD
         name = OD.name
         age = String(OD.age)
@@ -50,16 +54,16 @@ struct UpdateDog: View {
     var body: some View {
         NavigationView {
             Form {
-                Section(header: Text($name.wrappedValue + "'s New Info:")) {
-                    TextField("Dog's name", text: $name)
-                    TextField("Dog's age", text: $age)
+                Section(header: Text(self.original.name + "'s New Info:")) {
+                    TextField("Name: \(self.original.name)", text: self.$name)
+                    TextField("Age: \(String(self.original.age))", text: self.$age)
                 }
                 Button(action: updateDogInDB)
                 {
                     Text("Update")
                 }
             }
-            .navigationBarTitle("Update " + $name.wrappedValue + "'s info")
+            .navigationBarTitle("Update " + self.original.name + "'s info")
         }
     }
 }
