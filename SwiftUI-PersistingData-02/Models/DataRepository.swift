@@ -80,4 +80,23 @@ class DataRepository: ObservableObject {
           print(error.localizedDescription)
         }
     }
+    
+    func updateDog( name key: String, newName:String, newAge:Int) {
+        // 1
+        objectWillChange.send()
+        do {
+          // 2
+          let realm = try Realm()
+          try realm.write {
+            // 3
+            realm.create(
+              Dog.self,
+                value: ["name": newName, "age": newAge],
+              update: .modified)
+          }
+        } catch let error {
+          // Handle error
+          print(error.localizedDescription)
+        }
+    }
 }

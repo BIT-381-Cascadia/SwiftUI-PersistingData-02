@@ -43,13 +43,13 @@ struct ListDogsRow: View {
                 Text("Age: \(String(thisDog.age))")
             }
             Spacer()
-            if mode == .Update {
+            if mode == .Add {
                 Button(action:noop) {
                     Text("Edit")
                 }
             }
             else if mode == .Update {
-                Button(action:noop) {
+                NavigationLink(destination: UpdateDog(name: thisDog.name, age:thisDog.age)) {
                     Text("Update")
                 }
             }

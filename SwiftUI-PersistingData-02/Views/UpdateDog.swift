@@ -10,13 +10,16 @@
 import SwiftUI
 
 struct UpdateDog: View {
-    
-    init( nameOfDogToUpdate dogName: String) {
         
-    }
-    
     @State var name: String = ""
     @State var age: String = ""
+    
+    private let originalName: String
+    init(name n: String, age a: Int) {
+        originalName = n
+        name = n
+        age = String(a)
+    }
 
     @EnvironmentObject var theDataRepo: DataRepository
     
@@ -30,7 +33,7 @@ struct UpdateDog: View {
     // https://stackoverflow.com/a/57279591/250610
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
-    func saveDogToDB() {
+    func updateDogInDB() {
         guard Int(self.age) != nil else {
             print("Age wasn't a number")
             return
@@ -38,8 +41,7 @@ struct UpdateDog: View {
         
         showFormElts()
         
-        let newDog = Dog(name: self.name, age: Int(self.age)! )
-        theDataRepo.saveDog(theDog: newDog)
+        theDataRepo.updateDog(name: self.originalName, newName: self.name, newAge: Int(self.age)!)
         
         // return to previous screen:
         self.presentationMode.wrappedValue.dismiss()
@@ -48,22 +50,22 @@ struct UpdateDog: View {
     var body: some View {
         NavigationView {
             Form {
-                Section(header: Text("New Dog's Info:")) {
+                Section(header: Text($name.wrappedValue + "'s New Info:")) {
                     TextField("Dog's name", text: $name)
                     TextField("Dog's age", text: $age)
                 }
-                Button(action: saveDogToDB)
+                Button(action: updateDogInDB)
                 {
-                    Text("Save")
+                    Text("Update")
                 }
             }
-            .navigationBarTitle("Add New Dog")
+            .navigationBarTitle("Update " + $name.wrappedValue + "'s info")
         }
     }
 }
 
 struct UpdateDog_Previews: PreviewProvider {
     static var previews: some View {
-        UpdateDog(nameOfDogToUpdate: "Fido")
+        UpdateDog(name:"Fido", age:2)
     }
 }

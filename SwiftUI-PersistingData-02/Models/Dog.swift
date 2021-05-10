@@ -9,6 +9,7 @@ import Foundation
 import RealmSwift
 
 class Dog: Object {
+//    @objc dynamic var id = 0
     @objc dynamic var name = ""
     @objc dynamic var age = 0
     convenience init(name:String, age:Int) {
@@ -17,7 +18,7 @@ class Dog: Object {
         self.age = age
     }
     
-//    override class func primaryKey() -> String? {
-//        return "name"
-//    }
+    override class func primaryKey() -> String? {
+        return "name"
+    }
 }
