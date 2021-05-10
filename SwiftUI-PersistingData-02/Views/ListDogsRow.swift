@@ -49,7 +49,7 @@ struct ListDogsRow: View {
                 }
             }
             else if mode == .Update {
-                NavigationLink(destination: UpdateDog(name: thisDog.name, age:thisDog.age)) {
+                NavigationLink(destination: UpdateDog(originalDog:thisDog)) {
                     Text("Update")
                 }
             }
@@ -68,7 +68,7 @@ struct ListDogsRow_Previews: PreviewProvider {
     
 
     static var previews: some View {
-        let demoDog = Dog(name: "Fido", age: 3)
+        let demoDog = Dog(id: UUID().hashValue, name: "Fido", age: 3)
         
         ListDogsRow(theDog: demoDog, mode: .Update)
     }

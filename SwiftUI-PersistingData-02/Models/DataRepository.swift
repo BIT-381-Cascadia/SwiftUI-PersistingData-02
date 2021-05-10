@@ -16,11 +16,12 @@ class DataRepository: ObservableObject {
         // complicated object
     }
     
-    func saveDog(theDog: Dog) {
+    func saveDog(newName: String, newAge: Int) {
         objectWillChange.send()
         let realm = try! Realm()
 
         try! realm.write {
+            let theDog = Dog(id: UUID().hashValue, name: newName, age: newAge)
             realm.add(theDog)
         }
     }
@@ -51,7 +52,7 @@ class DataRepository: ObservableObject {
         do {
             // 3
             let realm = try Realm()
-            let results = realm.objects(Dog.self).filter( "name = \"" + theDog.name + "\"   ")
+            let results = realm.objects(Dog.self).filter( "id = " + String(theDog.id) + "  ")
             
             if results.count != 1 {
                 return
@@ -81,7 +82,7 @@ class DataRepository: ObservableObject {
         }
     }
     
-    func updateDog( name key: String, newName:String, newAge:Int) {
+    func updateDog( id: Int, newName:String, newAge:Int) {
         // 1
         objectWillChange.send()
         do {
@@ -91,7 +92,7 @@ class DataRepository: ObservableObject {
             // 3
             realm.create(
               Dog.self,
-                value: ["name": newName, "age": newAge],
+                value: ["id": id, "name": newName, "age": newAge],
               update: .modified)
           }
         } catch let error {

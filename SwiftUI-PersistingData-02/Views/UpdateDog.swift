@@ -14,11 +14,11 @@ struct UpdateDog: View {
     @State var name: String = ""
     @State var age: String = ""
     
-    private let originalName: String
-    init(name n: String, age a: Int) {
-        originalName = n
-        name = n
-        age = String(a)
+    private let original: Dog
+    init(originalDog OD: Dog) {
+        original = OD
+        name = OD.name
+        age = String(OD.age)
     }
 
     @EnvironmentObject var theDataRepo: DataRepository
@@ -41,7 +41,7 @@ struct UpdateDog: View {
         
         showFormElts()
         
-        theDataRepo.updateDog(name: self.originalName, newName: self.name, newAge: Int(self.age)!)
+        theDataRepo.updateDog(id: self.original.id, newName: self.name, newAge: Int(self.age)!)
         
         // return to previous screen:
         self.presentationMode.wrappedValue.dismiss()
@@ -66,6 +66,7 @@ struct UpdateDog: View {
 
 struct UpdateDog_Previews: PreviewProvider {
     static var previews: some View {
-        UpdateDog(name:"Fido", age:2)
+        //UpdateDog(name:"Fido", age:2)
+        Text("NOT AVAILABLE AT THIS TIME")
     }
 }

@@ -33,8 +33,7 @@ struct AddDog: View {
         
         showFormElts()
         
-        let newDog = Dog(name: self.name, age: Int(self.age)! )
-        theDataRepo.saveDog(theDog: newDog)
+        theDataRepo.saveDog(newName: self.name, newAge: Int(self.age)!)
         
         // return to previous screen:
         self.presentationMode.wrappedValue.dismiss()
