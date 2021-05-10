@@ -43,6 +43,11 @@ struct ContentView: View {
                     Text("Delete A Dog")
                 }
                     .padding()
+                
+                NavigationLink(destination: ClearDB()) {
+                    Text("Clear Database")
+                }
+                    .padding()
 
             }
         }

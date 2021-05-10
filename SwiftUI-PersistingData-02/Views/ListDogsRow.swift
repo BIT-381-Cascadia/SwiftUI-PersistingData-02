@@ -29,10 +29,12 @@ struct ListDogsRow: View {
     
     func deleteDogFromDB() {
         theDataRepo.deleteDog(theDog: thisDog)
-        
-        // return to previous screen:
-        // self.presentationMode.wrappedValue.dismiss()
+        // Do NOT dismiss the screen, so the user can see the dog disappear (and/or delete more)
     }
+    
+    // To dismiss the screen:
+    // https://stackoverflow.com/a/57279591/250610
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     var body: some View {
         HStack {

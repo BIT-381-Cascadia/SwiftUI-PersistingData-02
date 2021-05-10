@@ -22,6 +22,7 @@
 		E4648E772641066B00DD8399 /* ListDogsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4648E762641066B00DD8399 /* ListDogsRow.swift */; };
 		E47DA81126499A5200F64DE2 /* DogListMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47DA81026499A5200F64DE2 /* DogListMode.swift */; };
 		E47DA81326499CAF00F64DE2 /* UpdateDog.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47DA81226499CAF00F64DE2 /* UpdateDog.swift */; };
+		E47DA8152649AD4200F64DE2 /* ClearDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47DA8142649AD4200F64DE2 /* ClearDB.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		E4648E762641066B00DD8399 /* ListDogsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDogsRow.swift; sourceTree = "<group>"; };
 		E47DA81026499A5200F64DE2 /* DogListMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogListMode.swift; sourceTree = "<group>"; };
 		E47DA81226499CAF00F64DE2 /* UpdateDog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateDog.swift; sourceTree = "<group>"; };
+		E47DA8142649AD4200F64DE2 /* ClearDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClearDB.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			children = (
 				E4648E532640D6FA00DD8399 /* ContentView.swift */,
 				E4648E6D2640D88600DD8399 /* AddDog.swift */,
+				E47DA8142649AD4200F64DE2 /* ClearDB.swift */,
 				E47DA81226499CAF00F64DE2 /* UpdateDog.swift */,
 				E4648E742640E98B00DD8399 /* ListAllDogs.swift */,
 				E4648E762641066B00DD8399 /* ListDogsRow.swift */,
@@ -199,6 +202,7 @@
 				E4648E6B2640D80500DD8399 /* DataRepository.swift in Sources */,
 				E4648E692640D7C600DD8399 /* Person.swift in Sources */,
 				E47DA81326499CAF00F64DE2 /* UpdateDog.swift in Sources */,
+				E47DA8152649AD4200F64DE2 /* ClearDB.swift in Sources */,
 				E4648E772641066B00DD8399 /* ListDogsRow.swift in Sources */,
 				E47DA81126499A5200F64DE2 /* DogListMode.swift in Sources */,
 				E4648E752640E98B00DD8399 /* ListAllDogs.swift in Sources */,
