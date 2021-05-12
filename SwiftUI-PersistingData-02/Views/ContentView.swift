@@ -24,17 +24,28 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
-                NavigationLink(destination: AddDog()) {
-                    Text("Add a Dog")
+               // NavigationLink(destination: AddDog()) {
+                //    Text("Add a Dog")
+              //  }
+              //      .padding()
+                
+                NavigationLink(destination: AddKangaroo()) {
+                    Text("Add a supercool Kangaroo")
                 }
                     .padding()
                 
-                NavigationLink(destination: ListAllDogs(whichMode:.List)) {
-                    Text("List All Dogs")
+                //NavigationLink(destination: //ListAllDogs(whichMode:.List)) {
+                 //   Text("List All Dogs")
+               // }
+                 //   .padding()
+
+                NavigationLink(destination:
+                    ListAllKangaroos(whichMode:.List)) {
+                    Text("List All the Kangaroos")
                 }
                     .padding()
-
-                NavigationLink(destination: ListAllDogs(whichMode: .Update)) {
+                
+                /*NavigationLink(destination: ListAllDogs(whichMode: .Update)) {
                     Text("Update A Dog")
                 }
                     .padding()
@@ -48,7 +59,11 @@ struct ContentView: View {
                     Text("Clear Database")
                 }
                     .padding()
-
+                */
+                NavigationLink(destination: ClearKangaroosDB()) {
+                    Text("Clear All Kangaroos From DB")
+                }
+                    .padding()
             }
         }
             .padding()

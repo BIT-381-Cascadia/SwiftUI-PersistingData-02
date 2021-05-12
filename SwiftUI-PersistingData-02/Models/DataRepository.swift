@@ -100,4 +100,19 @@ class DataRepository: ObservableObject {
           print(error.localizedDescription)
         }
     }
+    
+    func saveKangaroo(newName: String, newAge: Int) {
+        objectWillChange.send()
+        let realm = try! Realm()
+        
+        try! realm.write {
+            let theKangaroo = Kangaroo(id: UUID().hashValue, name: newName, age: newAge)
+            realm.add(theKangaroo)
+        }
+    }
+    
+    func loadKangaroo() -> Results<Kangaroo> {
+        let realm = try! Realm()
+        return realm.objects(Kangaroo.self)
+    }
 }
