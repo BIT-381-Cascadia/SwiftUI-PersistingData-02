@@ -45,6 +45,11 @@ struct ListCatRow: View {
                     Text("Edit")
                 }
             }
+            else if mode == .Update {
+                NavigationLink(destination: UpdateCat(originalCat: thisCat)) {
+                    Text("Update")
+                }
+            }
             else if mode == .Delete {
                 Button(action:deleteCatFromDB) {
                     Text("Delete")

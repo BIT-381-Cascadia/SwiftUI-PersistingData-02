@@ -27,22 +27,27 @@ struct ContentView2: View {
                 NavigationLink(destination: AddCat()) {
                     Text("Add a Cat")
                 }
-                    .padding()
+                .padding()
                 
                 NavigationLink(destination: ListAllCats(whichMode:.List)) {
                     Text("List All Cats")
                 }
-                    .padding()
+                .padding()
+                
+                NavigationLink(destination: ListAllCats(whichMode: .Update)) {
+                    Text("Update A Dog")
+                }
+                .padding()
                 
                 NavigationLink(destination: ListAllCats(whichMode: .Delete)) {
                     Text("Delete a Cat")
                 }
-                    .padding()
+                .padding()
                 
                 NavigationLink(destination: ClearDB()) {
                     Text("Clear Database")
                 }
-                    .padding()
+                .padding()
 
             }
         }

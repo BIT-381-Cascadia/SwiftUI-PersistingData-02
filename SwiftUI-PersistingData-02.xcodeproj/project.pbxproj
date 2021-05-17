@@ -13,6 +13,7 @@
 		5F5D1DA02649E21900FB4723 /* CatListMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5D1D9F2649E21900FB4723 /* CatListMode.swift */; };
 		5F5D1DA22649E56600FB4723 /* ListAllCats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5D1DA12649E56600FB4723 /* ListAllCats.swift */; };
 		5F5D1DA42649F1F900FB4723 /* ContentView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5D1DA32649F1F900FB4723 /* ContentView2.swift */; };
+		5FA06446265309B70075F215 /* UpdateCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA06445265309B70075F215 /* UpdateCat.swift */; };
 		E4648E522640D6FA00DD8399 /* SwiftUI_PersistingData_02App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4648E512640D6FA00DD8399 /* SwiftUI_PersistingData_02App.swift */; };
 		E4648E542640D6FA00DD8399 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4648E532640D6FA00DD8399 /* ContentView.swift */; };
 		E4648E562640D6FD00DD8399 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4648E552640D6FD00DD8399 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 		5F5D1D9F2649E21900FB4723 /* CatListMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListMode.swift; sourceTree = "<group>"; };
 		5F5D1DA12649E56600FB4723 /* ListAllCats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAllCats.swift; sourceTree = "<group>"; };
 		5F5D1DA32649F1F900FB4723 /* ContentView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView2.swift; sourceTree = "<group>"; };
+		5FA06445265309B70075F215 /* UpdateCat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCat.swift; sourceTree = "<group>"; };
 		E4648E4E2640D6FA00DD8399 /* SwiftUI-PersistingData-02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-PersistingData-02.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4648E512640D6FA00DD8399 /* SwiftUI_PersistingData_02App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_PersistingData_02App.swift; sourceTree = "<group>"; };
 		E4648E532640D6FA00DD8399 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -67,6 +69,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5FA06447265310400075F215 /* CatViews */ = {
+			isa = PBXGroup;
+			children = (
+				5FA06445265309B70075F215 /* UpdateCat.swift */,
+				5F5D1DA12649E56600FB4723 /* ListAllCats.swift */,
+				5F5D1D9F2649E21900FB4723 /* CatListMode.swift */,
+				5F5D1D9D2649E1C600FB4723 /* ListCatRow.swift */,
+				5F5D1D9B2649DAB000FB4723 /* AddCat.swift */,
+				5F5D1DA32649F1F900FB4723 /* ContentView2.swift */,
+			);
+			path = CatViews;
+			sourceTree = "<group>";
+		};
 		E4648E452640D6FA00DD8399 = {
 			isa = PBXGroup;
 			children = (
@@ -118,18 +133,14 @@
 		E4648E6C2640D86700DD8399 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5FA06447265310400075F215 /* CatViews */,
 				E4648E532640D6FA00DD8399 /* ContentView.swift */,
-				5F5D1DA32649F1F900FB4723 /* ContentView2.swift */,
 				E4648E6D2640D88600DD8399 /* AddDog.swift */,
 				E47DA8142649AD4200F64DE2 /* ClearDB.swift */,
 				E47DA81226499CAF00F64DE2 /* UpdateDog.swift */,
 				E4648E742640E98B00DD8399 /* ListAllDogs.swift */,
 				E4648E762641066B00DD8399 /* ListDogsRow.swift */,
 				E47DA81026499A5200F64DE2 /* DogListMode.swift */,
-				5F5D1D9B2649DAB000FB4723 /* AddCat.swift */,
-				5F5D1D9D2649E1C600FB4723 /* ListCatRow.swift */,
-				5F5D1D9F2649E21900FB4723 /* CatListMode.swift */,
-				5F5D1DA12649E56600FB4723 /* ListAllCats.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -214,6 +225,7 @@
 				E4648E542640D6FA00DD8399 /* ContentView.swift in Sources */,
 				E4648E522640D6FA00DD8399 /* SwiftUI_PersistingData_02App.swift in Sources */,
 				5F5D1D9E2649E1C600FB4723 /* ListCatRow.swift in Sources */,
+				5FA06446265309B70075F215 /* UpdateCat.swift in Sources */,
 				E4648E6E2640D88600DD8399 /* AddDog.swift in Sources */,
 				5F5D1D9A2649D97900FB4723 /* Cat.swift in Sources */,
 				5F5D1DA42649F1F900FB4723 /* ContentView2.swift in Sources */,

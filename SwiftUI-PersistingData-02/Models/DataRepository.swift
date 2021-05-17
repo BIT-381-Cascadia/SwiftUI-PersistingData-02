@@ -144,4 +144,18 @@ class DataRepository: ObservableObject {
           print(error.localizedDescription)
         }
     }
+    
+    //Update Cat
+    func updateCat(id: Int, name: String, age: Int, sex: String) {
+        objectWillChange.send()
+        do {
+            let realm = try Realm()
+            try realm.write{
+                realm.create(Cat.self, value: ["id": id, "name": name, "age": age, "sex": sex],
+                             update: .modified)
+            }
+        }catch let error {
+            print(error.localizedDescription)
+        }
+    }
 }
