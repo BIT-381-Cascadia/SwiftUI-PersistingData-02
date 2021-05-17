@@ -137,4 +137,16 @@ class DataRepository: ObservableObject {
           print(error.localizedDescription)
         }
     }
+    
+    func updateKangaroo( id: Int, newName:String, newAge:Int) {
+        objectWillChange.send()
+        do {
+            let realm = try Realm()
+            try realm.write {
+                realm.create(Kangaroo.self, value: ["id": id, "name": newName, "age":newAge], update: .modified)
+            }
+        }catch let error {
+            print(error.localizedDescription)
+        }
+    }
 }

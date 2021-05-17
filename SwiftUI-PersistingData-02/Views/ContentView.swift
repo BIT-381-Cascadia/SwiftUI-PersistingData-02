@@ -68,6 +68,12 @@ struct ContentView: View {
                     Text("Remove a Kangaroo")
                 }
                 .padding()
+                NavigationLink(destination: ListAllKangaroos(whichMode: .Update)) {
+                    Text("Update a Kangaroo")
+                }
+                
+                .padding()
+                
             }
         }
             .padding()

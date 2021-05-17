@@ -11,6 +11,8 @@ struct ListKangaroosRow: View {
     
     var mode: KangarooListMode
     
+    @State private var updateToggle = false
+    
     private let thisKangaroo:Kangaroo
     
     init(theKangaroo:Kangaroo, mode:KangarooListMode) {
@@ -26,7 +28,7 @@ struct ListKangaroosRow: View {
         theDataRepo.deleteKangaroo(theKangaroo: thisKangaroo)
     }
     
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    //@Environment(\.presentationMode) var presentationMode: //Binding<PresentationMode>
     
     var body: some View {
         HStack {
@@ -41,11 +43,14 @@ struct ListKangaroosRow: View {
                 }
             }
         
-    //        else if mode == .Update {
-     //           NavigationLink(destination: UpdateKangaroo(originalKangaroo:thisKangaroo)) {
-    //                Text("Update")
-    //            }
-    //        }
+            else if mode == .Update {
+                //Button(action: { self.updateToggle.toggle()})
+                  //  .sheet(isPresented: $updateToggle) { UpdateKangaroo() }
+                
+                NavigationLink(destination: UpdateKangaroo(originalKangaroo:thisKangaroo)) {
+                    Text("Update")
+                }
+            }
           else if mode == .Delete {
                Button(action:deleteKangarooFromDB) {
                    Text("Delete")
