@@ -64,6 +64,10 @@ struct ContentView: View {
                     Text("Clear All Kangaroos From DB")
                 }
                     .padding()
+                NavigationLink(destination: ListAllKangaroos( whichMode: .Delete)) {
+                    Text("Remove a Kangaroo")
+                }
+                .padding()
             }
         }
             .padding()

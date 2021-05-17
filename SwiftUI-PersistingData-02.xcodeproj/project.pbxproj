@@ -13,6 +13,7 @@
 		3F3C74E82649EC6A00A4FCA1 /* KangarooListMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3C74E72649EC6A00A4FCA1 /* KangarooListMode.swift */; };
 		3F3C74ED2649F09400A4FCA1 /* ClearKangaroosDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3C74EC2649F09400A4FCA1 /* ClearKangaroosDB.swift */; };
 		3F3C74EF264A5BA000A4FCA1 /* ListKangaroosRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3C74EE264A5BA000A4FCA1 /* ListKangaroosRow.swift */; };
+		3F3C74F326530AAE00A4FCA1 /* UpdateKangaroo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3C74F226530AAE00A4FCA1 /* UpdateKangaroo.swift */; };
 		E4648E522640D6FA00DD8399 /* SwiftUI_PersistingData_02App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4648E512640D6FA00DD8399 /* SwiftUI_PersistingData_02App.swift */; };
 		E4648E542640D6FA00DD8399 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4648E532640D6FA00DD8399 /* ContentView.swift */; };
 		E4648E562640D6FD00DD8399 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4648E552640D6FD00DD8399 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 		3F3C74E72649EC6A00A4FCA1 /* KangarooListMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KangarooListMode.swift; sourceTree = "<group>"; };
 		3F3C74EC2649F09400A4FCA1 /* ClearKangaroosDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearKangaroosDB.swift; sourceTree = "<group>"; };
 		3F3C74EE264A5BA000A4FCA1 /* ListKangaroosRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListKangaroosRow.swift; sourceTree = "<group>"; };
+		3F3C74F226530AAE00A4FCA1 /* UpdateKangaroo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateKangaroo.swift; sourceTree = "<group>"; };
 		E4648E4E2640D6FA00DD8399 /* SwiftUI-PersistingData-02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-PersistingData-02.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4648E512640D6FA00DD8399 /* SwiftUI_PersistingData_02App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_PersistingData_02App.swift; sourceTree = "<group>"; };
 		E4648E532640D6FA00DD8399 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				3F3C74E72649EC6A00A4FCA1 /* KangarooListMode.swift */,
 				3F3C74EC2649F09400A4FCA1 /* ClearKangaroosDB.swift */,
 				3F3C74EE264A5BA000A4FCA1 /* ListKangaroosRow.swift */,
+				3F3C74F226530AAE00A4FCA1 /* UpdateKangaroo.swift */,
 			);
 			path = Kangaroo;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F3C74F326530AAE00A4FCA1 /* UpdateKangaroo.swift in Sources */,
 				E4648E542640D6FA00DD8399 /* ContentView.swift in Sources */,
 				3F3C74E42649E79B00A4FCA1 /* ListAllKangaroos.swift in Sources */,
 				3F3C74E02649DA4000A4FCA1 /* Kangaroo.swift in Sources */,

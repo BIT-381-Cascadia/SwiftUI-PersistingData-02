@@ -22,6 +22,9 @@ struct ListKangaroosRow: View {
     
     @EnvironmentObject var theDataRepo: DataRepository
     
+    func deleteKangarooFromDB() {
+        theDataRepo.deleteKangaroo(theKangaroo: thisKangaroo)
+    }
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
@@ -31,14 +34,24 @@ struct ListKangaroosRow: View {
                 Text("Name: \(thisKangaroo.name)")
                 Text("Age: \(String(thisKangaroo.age))")
             }
-            
             Spacer()
             if mode == .Add {
                 Button(action:noop) {
                     Text("Edit")
                 }
             }
-        }
+        
+    //        else if mode == .Update {
+     //           NavigationLink(destination: UpdateKangaroo(originalKangaroo:thisKangaroo)) {
+    //                Text("Update")
+    //            }
+    //        }
+          else if mode == .Delete {
+               Button(action:deleteKangarooFromDB) {
+                   Text("Delete")
+               }
+           }
+       }
         .padding()
         .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: 2)
     }
