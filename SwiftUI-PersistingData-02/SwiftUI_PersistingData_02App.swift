@@ -11,7 +11,8 @@ import SwiftUI
 struct SwiftUI_PersistingData_02App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView()
+            ContentView2()
         }
     }
 }
