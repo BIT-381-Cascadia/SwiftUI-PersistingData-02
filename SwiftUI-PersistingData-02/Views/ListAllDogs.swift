@@ -5,8 +5,6 @@
 //  Created by Mike Panitz on 5/3/21.
 //
 
-
-
 import SwiftUI
 import RealmSwift
 

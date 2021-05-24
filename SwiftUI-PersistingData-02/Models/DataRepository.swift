@@ -100,4 +100,53 @@ class DataRepository: ObservableObject {
           print(error.localizedDescription)
         }
     }
+    
+    func saveKangaroo(newName: String, newAge: Int) {
+        objectWillChange.send()
+        let realm = try! Realm()
+        
+        try! realm.write {
+            let theKangaroo = Kangaroo(id: UUID().hashValue, name: newName, age: newAge)
+            realm.add(theKangaroo)
+        }
+    }
+    
+    func loadKangaroo() -> Results<Kangaroo> {
+        let realm = try! Realm()
+        return realm.objects(Kangaroo.self)
+    }
+    
+    func deleteKangaroo(theKangaroo: Kangaroo) {
+        objectWillChange.send()
+
+        do {
+            // 3
+            let realm = try Realm()
+            let results = realm.objects(Kangaroo.self).filter( "id = " + String(theKangaroo.id) + "  ")
+            
+            if results.count != 1 {
+                return
+            }
+
+            try realm.write {
+                // 4
+                realm.delete(results[0])
+            }
+        } catch let error {
+          // Handle error
+          print(error.localizedDescription)
+        }
+    }
+    
+    func updateKangaroo( id: Int, newName:String, newAge:Int) {
+        objectWillChange.send()
+        do {
+            let realm = try Realm()
+            try realm.write {
+                realm.create(Kangaroo.self, value: ["id": id, "name": newName, "age":newAge], update: .modified)
+            }
+        }catch let error {
+            print(error.localizedDescription)
+        }
+    }
 }
